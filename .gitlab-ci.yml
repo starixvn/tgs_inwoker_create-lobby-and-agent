@@ -2,14 +2,14 @@ stage:
  - deploy
  
 variables:
-  namespace:
-  lobby:
-  agent:
-  image:
-  lang: 
-  domain:
-  token: 
-  site:
+  namespace: staging
+  lobby: lobby1-t1
+  agent: agent-t1
+  image: lobby-t1
+  lang: en-US
+  domain: stg-gpi3.rpgp.cc
+  token: ooooxxxxx
+  site: https"//stg-t1.rpgp.cc/
 
 build-job:
   stage: deploy
