@@ -1,0 +1,19 @@
+stage:
+ - deploy
+ 
+variables:
+  namespace:
+  lobby:
+  agent:
+  image:
+  lang: 
+  domain:
+  token: 
+  site:
+
+build-job:
+  stage: deploy
+  script:
+    - | 
+      envsubst < agent-${namespace}.yaml 
+      envsubst < agent-${namespace}.yaml  | kubectl apply -f -
