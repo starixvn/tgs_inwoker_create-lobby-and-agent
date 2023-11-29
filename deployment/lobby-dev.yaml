@@ -42,13 +42,24 @@ spec:
         imagePullPolicy: IfNotPresent
         livenessProbe:
           failureThreshold: 3
-          httpGet:
-            path: /healthcheck
-            port: 80
-            scheme: HTTP
-          initialDelaySeconds: 5
+          initialDelaySeconds: 30
           periodSeconds: 5
           successThreshold: 1
+          tcpSocket:
+            port: 80
+          timeoutSeconds: 1
+        name: $lobby
+        ports:
+        - containerPort: 80
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          successThreshold: 1
+          tcpSocket:
+            port: 80
           timeoutSeconds: 1
         resources:
           limits:
