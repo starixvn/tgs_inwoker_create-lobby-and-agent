@@ -27,15 +27,17 @@ spec:
       containers:
       - env:
         - name: CLIENT
-          value: VxSVy4C2tGgoNBq3JVzlJSghtkU3ydxAbdjxUBvZfJUJkgXRb8MM32
+          value: I7nKiimrZQOqnJ6ryjUw74c0Hi64KC6Myunhob4cHh8VOUIuZh4p63czefxyyzbZ
         - name: CURRENCY
-          value: CNY
+          value: $curreny
         - name: BRAND
           value: PGG
         - name: DEFAULT_LANGUAGE
           value: $lang
+        - name: WAPTEMPLATE
+          value: "11"
         - name: THEME
-          value: red
+          value: wapT11
         - name: SOURCE_URL
           value: https://images.srvptt.com/
         image: $image
