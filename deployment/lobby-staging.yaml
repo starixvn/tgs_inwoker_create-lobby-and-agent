@@ -29,7 +29,7 @@ spec:
         - name: CLIENT
           value: I7nKiimrZQOqnJ6ryjUw74c0Hi64KC6Myunhob4cHh8VOUIuZh4p63czefxyyzbZ
         - name: CURRENCY
-          value: $curreny
+          value: $currency
         - name: BRAND
           value: PGG
         - name: DEFAULT_LANGUAGE
