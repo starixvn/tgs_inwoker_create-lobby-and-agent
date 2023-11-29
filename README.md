@@ -1,6 +1,8 @@
 # create-lobby-and-lobby
 
+## sample
 
+![image](https://hackmd.io/_uploads/BJjybEEBp.png)
 
 ## Getting started
 
