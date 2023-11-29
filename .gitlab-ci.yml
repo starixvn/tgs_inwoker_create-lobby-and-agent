@@ -14,10 +14,13 @@ variables:
 build-job:
   stage: deploy
   before_script:
-    export PATH=$PATH:/usr/local/hub-tool 
+    - export PATH=$PATH:/usr/local/hub-tool 
+    - export KUBECONFIG="${kubeconfig_${namespace}}"
+    - echo "KUBECONFIG=$KUBECONFIG"
+    - echo "original=$kubeconfig_staging"
   script:
     - | 
-      hub-tool repo ls
+      hub-tool tag ls pgtgs/${image}  | grep -v inactive
       image=$(hub-tool tag ls pgtgs/${image}  | grep -v inactive | awk '{print $1}' | sed -n 2p)
       echo "image=${image}"
 
