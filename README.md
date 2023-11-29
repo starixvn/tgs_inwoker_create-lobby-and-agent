@@ -2,7 +2,7 @@
 
 ## sample
 
-![image](https://hackmd.io/_uploads/BJjybEEBp.png)
+![for example](/images/sample.png)*sample*
 
 ## Getting started
 
