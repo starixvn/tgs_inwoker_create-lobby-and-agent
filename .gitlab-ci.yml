@@ -22,5 +22,5 @@ build-job:
       image=$(hub-tool tag ls pgtgs/${image}  | grep -v inactive | awk '{print $1}' | sed -n 2p)
       echo "image=${image}"
 
-      envsubst < ${type}-${namespace}.yaml 
-      envsubst < ${type}-${namespace}.yaml  | kubectl apply -f -
+      envsubst < deployment/${type}-${namespace}.yaml 
+      envsubst < deployment/${type}-${namespace}.yaml  | kubectl apply -f -
