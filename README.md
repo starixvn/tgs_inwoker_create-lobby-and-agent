@@ -1,4 +1,4 @@
-# create-lobby-and-lobby
+# create-lobby-and-agent
 
 ## sample
 
