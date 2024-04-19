@@ -8,7 +8,7 @@ metadata:
   namespace: prod
 spec:
   progressDeadlineSeconds: 600
-  replicas: 1
+  replicas: 2
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -24,6 +24,16 @@ spec:
         app: $lobby
         type: frontend
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - $lobby
+            topologyKey: kubernetes.io/hostname
       containers:
       - env:
         - name: CLIENT
